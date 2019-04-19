@@ -1,0 +1,57 @@
+/* RESET ? 
+*/
+body {
+    margin: 0;
+}
+
+
+/* POLICES UTILISEES 
+*/
+
+
+/* TITRE ET NOM DE L'AUTEUR */
+header {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-bottom: 20px;
+}
+
+#bookTitle {
+    margin: 0;
+}
+
+#bookAuthor {
+    margin-top: 0;
+    font-size: 1.25em;
+}
+
+/* MENU */
+ul {
+    display: -webkit-inline-box;
+    list-style-type: none;
+    padding-inline-start: 0;
+    margin-bottom: 0;
+}
+
+li {
+    margin: 0.2em 0.5em 0.2em 0.5em;
+}
+
+
+/* AFFICHAGE DES CHAPITRES */
+.listChapters {
+    border: 4px double black;
+    margin: 5px;
+    padding: 5px;
+}
+
+h3 {
+    margin: 5px;
+}
+
+
+/* FOOTER */
+footer {
+    text-align: center;
+}
