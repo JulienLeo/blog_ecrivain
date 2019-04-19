@@ -11,7 +11,7 @@
             <p><h3><u><?= htmlspecialchars($data['title']); ?></u></h3></p>
             <p><?= nl2br(htmlspecialchars(substrWords($data['content'], 500))); ?></p>
             <p><em><a href="index.php?action=post&amp;id=<?= $data['id'] ?>">Lire la suite... </a></em></p>
-            <p><em>Ajouté le <?= $data['addition_date']; ?></em></p>
+            <p><em>Ajouté le <?= $data['addition_date_fr']; ?></em></p>
         </div>
 <?php
     }
