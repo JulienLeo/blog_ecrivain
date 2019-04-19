@@ -1,2 +1,2 @@
-<p>Retour en haut de page</p>
+<p><a href="#top">Retour en haut de page</a></p>
 <p>&copy; 2019 Julien Leo</p>

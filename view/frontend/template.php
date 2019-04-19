@@ -9,7 +9,7 @@
         <title>Billet Simple Pour L'Alaska</title>
     </head>
 
-    <body>
+    <body name="top">
         <header>
             <?php include 'header.php' ?>
             <nav><?php include 'navigation.php' ?></nav>
