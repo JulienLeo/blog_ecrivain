@@ -1,0 +1,12 @@
+{
+    "name": "juleo/composer",
+    "require": {
+        "composer/composer": "^1.8.4"
+    },
+    "authors": [
+        {
+            "name": "JuLeo",
+            "email": "julien.t.leopold@gmail.com"
+        }
+    ]
+}
