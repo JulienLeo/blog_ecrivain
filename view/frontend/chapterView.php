@@ -1,8 +1,11 @@
 <?php ob_start(); ?>
+<head>
+    <link rel="stylesheet" href="../../public/css/style.css">
+</head>
 
 <h1>Billet Simple Pour L'Alaska</h1>
 <h2>par Jean Forteroche</h2>
-<p><a href="index.php"><em>Retour à la liste des billets</em></a></p>
+<p><a href="index.php"><em>Retour à la liste des chapitres</em></a></p>
 
 <div class="chapterDiv">
     <p><h2><?= $chapter['id'] ?></h2></p>

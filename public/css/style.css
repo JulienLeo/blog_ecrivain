@@ -53,5 +53,36 @@ h3 {
 
 /* FOOTER */
 footer {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
     text-align: center;
+}
+
+
+
+
+
+
+/* PAGE CONTACT */
+
+.contactForm {
+    height: 60%;
+    width: 20%;
+    margin-top: 5%;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: rgba(156, 156, 156, 0.7);
+}
+
+.contactForm input, textarea {
+    width: 100%;
+    margin-top: 1em;
+    border-style: none;
+    border-radius: 3px;
+}
+
+#contactTitle {
+    margin : 0;
 }
