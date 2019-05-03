@@ -1,0 +1,12 @@
+{
+    "name": "julien/blog_ecrivain",
+    "require": {
+        "twig/twig": "^1.39"
+    },
+    "authors": [
+        {
+            "name": "JuLeo",
+            "email": "julien.t.leopold@gmail.com"
+        }
+    ]
+}

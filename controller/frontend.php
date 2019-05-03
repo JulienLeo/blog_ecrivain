@@ -6,7 +6,7 @@
     // PAGE ACCUEIL
 
     function listChapters() {
-        $chapterManager = new AAA\model\ChapterManager(); // création d'un objet qui récupèrera les données d'un chapitre
+        $chapterManager = new blog_ecrivain\model\ChapterManager(); // création d'un objet qui récupèrera les données d'un chapitre
         $chapters = $chapterManager->getChapters(); // appel de la fonction créant la liste des chapitres
     
         require 'view/frontend/listChaptersView.php';
@@ -63,13 +63,43 @@
 
 
     // PAGE CHAPITRE
-
     function chapter() {
-        $chapterManager = new AAA\model\ChapterManager(); // création d'un objet qui récupèrera les données d'un chapitre
-        //$commentManager = new AAA\model\CommentManager(); // création d'un objet qui récupèrera les données des commentaires
+        $chapterManager = new blog_ecrivain\model\ChapterManager(); // création d'un objet qui récupèrera les données d'un chapitre
+        $commentManager = new blog_ecrivain\model\CommentManager(); // création d'un objet qui récupèrera les données des commentaires
         
         $chapter = $chapterManager->getChapter($_GET['id']); // appel de la fonction qui sélectionne le chapitre selon son id
-        //$comments = $commentManager->getComments($_GET['id']); // appel de la fonction qui sélectionne les commentaires selon l'id du chapitre
+        $comments = $commentManager->getComments($_GET['id']); // appel de la fonction qui sélectionne les commentaires selon l'id du chapitre
     
         require 'view/frontend/chapterView.php';
+    }
+
+    function addComment($chapterId, $author_comment, $comment) {
+        $commentManager = new blog_ecrivain\model\CommentManager();
+        
+        $affectedLines = $commentManager->postComment($chapterId, $author_comment, $comment);
+
+        if ($affectedLines === false) {
+            throw new Exception('Impossible d\'ajouter le commentaire');
+        } else {
+            header('Location: index.php?action=post&id=' . $chapterId);
+        }
+    }
+
+    function alertComment() {
+
+    }
+
+
+    // NAVIGATION
+    function contact($data) {
+        header('Location : view/frontend/contactView.php');
+        return 'view/frontend/contactView.php';
+    }
+
+    function auteur() {
+        return 'view/frontend/contactView.php';
+    }
+
+    function chapList() {
+        return 'view/frontend/contactView.php';
     }

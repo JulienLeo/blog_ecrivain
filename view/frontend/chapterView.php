@@ -1,28 +1,46 @@
 <?php ob_start(); ?>
 <head>
-    <link rel="stylesheet" href="../../public/css/style.css">
+    <link rel="stylesheet" href="public/css/style.css">
 </head>
 
-<h1>Billet Simple Pour L'Alaska</h1>
-<h2>par Jean Forteroche</h2>
-<p><a href="index.php"><em>Retour à la liste des chapitres</em></a></p>
-
 <div class="chapterDiv">
-    <p><h2><?= $chapter['id'] ?></h2></p>
+    <p><h2><?= romanNumbered($chapter['id']); ?></h2></p>
     <p><h3><u><?= htmlspecialchars($chapter['title']); ?></u></h3></p>
     <p><?= nl2br(htmlspecialchars($chapter['content'])); ?></p>
+    <p><a href="#">Chapitre suivant &#8594;</a>
 </div>
 
 <div class="commentsDiv">
-    <h2>Commentaires<h2>
+    <h3>Poster un commentaire</h3>
+
+    <form action="index.php?action=addComment&amp;id=<?= $chapter['id'] ?>" method="post">
+        <div>
+            <label for="auteur">Auteur</label>
+            <input type="text" id="author" name="auteur" />
+        </div>
+        
+        <div>
+            <label for="commentaire">Commentaire</label>
+            <textarea name="commentaire" id="comment"></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Ajouter" />
+        </div>
+    </form>
 
 <?php 
     while ($comment = $comments->fetch()) { 
 ?>
-        <p><strong><?= htmlspecialchars($comment(['author_comment'])); ?></strong> le <?= $comment(['date_comment_fr']); ?></p>
+    
+    <h3>Commentaires</h3>
+    <div class="commentDiv">
+        <p><strong><?= htmlspecialchars($comment['author_comment']); ?></strong> le <?= ($comment['date_comment_fr']); ?></p>
         <p><?= nl2br(htmlspecialchars($comment['comment'])); ?></p>
 
                                             <p><a href=".........">Signaler</a></p>
+    </div>
+
 <?php
     }
 ?>

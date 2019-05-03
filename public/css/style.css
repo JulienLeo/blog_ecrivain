@@ -9,6 +9,19 @@ body {
 */
 
 
+/* TEXTE ENTOURE DE BORDURES */
+
+.borderedText {
+    border: 4px double black;
+    margin: 5px;
+    padding: 5px;
+}
+
+.textContent {
+    margin: 5px;
+}
+
+
 /* TITRE ET NOM DE L'AUTEUR */
 header {
     text-align: center;
@@ -27,26 +40,20 @@ header {
 }
 
 /* MENU */
-ul {
+ul.menu {
     display: -webkit-inline-box;
     list-style-type: none;
     padding-inline-start: 0;
     margin-bottom: 0;
 }
 
-li {
+.menu li {
     margin: 0.2em 0.5em 0.2em 0.5em;
 }
 
 
-/* AFFICHAGE DES CHAPITRES */
-.listChapters {
-    border: 4px double black;
-    margin: 5px;
-    padding: 5px;
-}
-
-h3 {
+/* AFFICHAGE DE LA LISTE DES CHAPITRES */
+.listChapters h3 {
     margin: 5px;
 }
 
@@ -55,11 +62,50 @@ h3 {
 footer {
     position: absolute;
     width: 100%;
-    bottom: 0;
     text-align: center;
 }
 
 
+/* PAGE CHAPITRE */
+.chapterDiv {
+    margin: 8px;
+}
+
+
+/* COMMENTAIRE */
+.commentsDiv {
+    margin: 8px;
+}
+
+#author {
+    border-radius: 3px;
+}
+
+#comment {
+    resize: none;
+    border-radius: 3px;
+    width: 300px;
+    height: 50px;
+}
+
+.commentDiv {
+    border: 1px solid black;
+    border-radius: 5px;
+}
+.commentDiv p {
+    margin: 10px;
+}
+
+
+/* PAGE AUTEUR */
+.authorBio h2 {
+    margin: 5px;
+}
+
+.authorAmazon {
+    margin: 5px;
+    padding: 5px;
+}
 
 
 
@@ -76,7 +122,7 @@ footer {
     background-color: rgba(156, 156, 156, 0.7);
 }
 
-.contactForm input, textarea {
+.contactForm input, .contactForm textarea {
     width: 100%;
     margin-top: 1em;
     border-style: none;

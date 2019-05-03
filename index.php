@@ -38,11 +38,31 @@
                 }
             }
 
-            /*elseif ($_GET['action'] == 'getComments') {
+            elseif($_GET['action'] == 'addComment') { // ajout d'un commentaire
+                if (isset($_GET['id']) && $_GET['id'] > 0) {
+                    if (!empty($_POST['author']) && !empty($_POST['comment'])) {
+                        addComment($_GET['id'], $_POST['author'], $_POST['comment']);
+                    }
+                    else {
+                        throw new Exception('Erreur : tous les champs ne sont pas remplis');
+                    }
+                }
+                else {
+                    throw new Exception('Erreur : aucun identifiant de chapitre envoyé');
+                }
+            }
+
+            elseif ($_GET['action'] == 'getComments') {
                 if (isset($_GET['id']) && $_GET['id'] > 0) {
 
                 }
-            }*/
+            }
+
+            elseif (isset($_GET['action'])) { // aller sur la page contact
+                if ($_GET['action'] == 'contact') {
+                    contact();
+                }
+            }
         }
 
         else {

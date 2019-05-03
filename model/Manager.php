@@ -1,5 +1,5 @@
 <?php
-    namespace AAA\Model;
+    namespace blog_ecrivain\Model;
 
     class Manager {
         protected function dbConnect() {
